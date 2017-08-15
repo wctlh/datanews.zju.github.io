@@ -1,0 +1,1751 @@
+<!DOCTYPE html>
+<!-- saved from url=(0109)http://www.tampabay.com/projects/2015/investigations/pinellas-failure-factories/chart-failing-black-students/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Chinese College education</title>
+  
+
+	<link rel="icon" href="../image/icon.png" type=" image/png" >
+    <link rel="stylesheet" href="../css/chart.min.css">
+    <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="../js/echarts.js"></script>
+	<script type="text/javascript" src="../js/bmap.js"></script>
+	<script type="text/javascript" src="../js/welcome.js"></script>
+	<script type="text/javascript" src="../js/1.js"></script>
+	<script type="text/javascript" src="../js/2.js"></script>
+	<script type="text/javascript" src="../js/3.js"></script>
+	<script type="text/javascript" src="../js/4.js"></script>
+	<script type="text/javascript" src="../js/5.js"></script>
+	<script type="text/javascript" src="../js/6.js"></script>
+	<script type="text/javascript" src="../js/china.js"></script>
+	<script type="text/javascript" src="../js/dark.js"></script>
+	<script type="text/javascript" src="../js/vintage.js"></script>
+	<script type="text/javascript" src="../js/macarons.js"></script>
+	<script type="text/javascript" src="../js/echarts-liquidfill.js"></script>
+	<script>
+	var shuangyiliudata=[
+    	{name: '山东', value:"提出《推进一流大学和一流学科建设方案》，<br>计划投入50亿，建设1-2所世界一流大学，6所高校进入全国百强，<br>50个学科进入ESI全球前1%，2030年10个学科进入ESI全球前1‰。"},
+		{name: '广东', value:"提出《关于建设高水平大学的意见等》，<br>计划投入50亿，建设2所世界一流大学，17所国内高水平(理工)大学，<br>此外还要建设110个重点学科。"},
+		{name: '四川', value:"提出《四川省深化高等教育综合改革方案》，<br>计划建设15所国内高水平大学，30个世界一流学科，<br>100个国内一流学科以及100个去与一流学科。"},
+		{name: '北京', value:"提出《北京高等学校高精尖创新中心建设计划》，<br>预计投入100亿，推进高校高精尖创新中心建设计划，<br>目前已经公布了两批19个高校高精尖创新中心。"},
+		{name: '上海', value:"提出《上海高等学校学科发展与优化布局规划》，<br>投入36亿建设高峰高原学科，计划建设20个世界一流学科，<br>180个学科进入全国前20%，建设过程中执行严格的监管和动态评估机制。"},
+		{name: '江苏', value:"提出《江苏高水平大学建设方案》，<br>5所以上高校进入全国百强，10所进入前50，100个左右学科进入ESI全球前1%，<br>国家一流学科数，不低于全国总数的10%;2030年建成两所世界一流大学。<br>进入全国百强的省属高校每年新增1亿元。"},
+		{name: '安徽', value:"提出《一流学科专业与高水平大学建设五年行动计划》，<br>建设1所世界一流大学，若干学科进入世界一流和国内一流行列，<br>另外安排70亿用于省属高校，实施高等教育振兴计划。"},
+		{name: '甘肃', value:"提出《统筹推进高水平大学和一流学科建设实施方案》，<br>建设1所世界一流大学，5所国内高水平大学;2-3个世界一流学科，<br>50个国内一流学科，15个学科进入ESI全球前1%，<br>2-3个学科进入ESI全球前1‰。"},
+		{name: '陕西', value:"提出《四个“一流”建设计划》，<br>建设1-3所世界一流大学，5-7所国内高水平大学;50个学科进入国内一流行列。"},
+		{name: '山西', value:"提出《关于全省高等教育改革发展工作情况的报告》，<br>建设1-2所国内高水平大学，2-3所区域一流大学。"},
+		{name: '内蒙古', value:"提出《关于自治区统筹推进国内和世界一流大学一流学科建设总体方案的通知》，<br>2020年5个学科进入国内一流;<br>2030年建成2-3所国内高水平大学;2050年再增加2-3所国内高水平大学，<br>建成1所世界一流大学。"},
+		{name: '湖南', value:"提出《湖南省全面推进一流大学与一流学科建设实施方案》，<br>2020年40个学科进入ESI全球前1%，45个左右的学科进入全国前10%;<br>5所大学进入国内一流大学或特色大学行列，<br>2050年4所大学进入世界一流。"},
+		{name: '浙江', value:"提出《高等教育十三五规划》，<br>建设2所世界一流大学，10所高校进入全国前100;50个学科进入ESI全球前1%，40个学科进入全国前10%，<br>100个左右学科进入全国前30%，若干学科进入全国前3。"},
+		{name: '河南', value:"提出《河南省优势特色学科建设工程实施方案》，<br>10年投入31亿，5个左右学科进入世界一流学科行列，<br>10个学科进入ESI前1%。"},
+		{name: '贵州', value:"提出《大力推进区域内一流大学和一流学科建设的实施意见》，<br>5年投入5个亿推进区域内大学和学科“双一流”建设。"},
+		{name: '河北', value:"提出《增设一流大学和一流学科专项资金》，<br>5年25个亿，建设3个国内高水平大学以及一批国内一流学科，个别学科进入国际一流行列。"},
+		{name: '湖北', value:"提出《关于推进一流大学和一流学科建设的实施意见》，<br>每年投入10-20亿，2020年力争10所以上大学进入全国百强，<br>至少5所大学列入国家层面开展的世界一流大学建设<br>。2030年至少2所大学进入世界一流大学行列，至少10所大学进入国内一流大学行列，<br>力争更多高校进入全国百强。2020年6个以上的学科领域进入ESI全球前1‰，20个左右进入前200位，<br>70个以上学科进入前1%，在全国学科评估中，排名第一的学科数占全国总数的10%左右，<br>60个左右学科进入前5名，120个左右学科进入前30%。<br>到2030年，湖北高校更多学科进入世界一流、国内一流行列。<br>到本世纪中叶，湖北世界一流大学和学科、国内一流大学和学科的数量都位居全国前列。"},
+		{name: '吉林', value:"提出《吉林省人民政府、吉林大学深入实施创新驱动发展战略、建设世界一流大学合作协议书》，<br>投入15亿重点支持吉林大学建设世界一流大学。"},
+		{name: '江西', value:"提出《江西省教育事业发展“十三五”规划》，<br>建设1所国内高水平大学，10个学科进入国内一流，个别学科进入世界一流学科行列。"},
+		{name: '宁夏', value:"提出《宁夏回族自治区西部一流大学和一流学科建设方案》，<br>投入2亿元重点建设宁夏大学和6个国内一流学科、10个西部一流学科。"},
+		{name: '重庆', value:"提出《重庆市教委通报》，力争2-3所高校跻身国内一流、行业一流大学行列，<br>建成一批在国内外有一定知名度和影响力的一流学科。"},
+		
+];
+	timedata =['2012年','2013年','2014年','2015年','2016年'];
+	var colors = [['#D2E9FF', '#0072E3']];
+	var areacolors = [['#C4E1FF']];
+	//提示框体
+	function tooltipFormatter(params) {
+	    var valuesFormatter = [];
+	    if (params.componentSubType == 'pie') {
+	        valuesFormatter
+	            .push('<div style="border-bottom: 1px solid rgba(255,255,255,.3); font-size: 18px;padding-bottom: 7px;margin-bottom: 7px">' +
+	                '本日销量' +
+	                '<br>' +
+	                '</div>' +
+	                '<span style="color:' +
+	                params.color +
+	                '">' + params.name + '</span>: ' + shuangyiliudata[params.name]);
+	    } else {
+	        valuesFormatter
+	            .push('<div style="border-bottom: 1px solid rgba(255,255,255,.3); font-size: 18px;padding-bottom: 7px;margin-bottom: 7px">' +
+	                params.seriesName +
+	                '</div>' +
+	                '<span style="color:' +
+	                params.color +
+	                '">' +
+	                params.name +
+	                '</span>: ' +
+	                params.value + '<br>');
+	    }
+
+	    return valuesFormatter;
+	}
+	function getValuesByname(name){
+		for(var i = 0;i<20;i++){
+			if(shuangyiliudata[i].name == name)
+				return shuangyiliudata[i].value;
+		}
+	}
+	function tooltip2(params){
+		var valuesFormatter = [];
+		var value = getValuesByname(params.name);
+		if(value!=null){
+	        valuesFormatter
+	            .push('<div style="width:40%;border-bottom: 1px solid rgba(255,255,255,.3); font-size: 18px;padding-bottom: 7px;margin-bottom: 7px">' +
+	                '双一流计划' +
+	                '<br>' +
+	                '</div>' +'<div style="width:40%;">'+
+	                '<span style="color:#3C3C3C' +
+	                params.color +
+	                '">' + params.name + '</span>: ' + value + '</div>');}
+		else {
+			valuesFormatter
+            .push('<div style="border-bottom: 1px solid rgba(255,255,255,.3); font-size: 18px;padding-bottom: 7px;margin-bottom: 7px">' +
+                '双一流计划' +
+                '<br>' +
+                '</div>' +
+                '<span style="color:#3C3C3C' +
+                params.color +
+                '">' + params.name + '</span>: ' + '该省无计划');
+		}
+	        return valuesFormatter;
+	}
+	</script>
+	<style type="text/css">
+		p.small {line-height: 50%}
+		p.middle {line-height: 95%;font-family:"Microsoft YaHei","Arial Narrow";}
+		p.big {line-height: 200%}
+	</style>
+</head>
+
+<body >
+
+<div>
+	<div>
+		<div class="swiper-container swiper-container-vertical"style="background-color:#FBFBFF;">
+			<div class="swiper-wrapper"style="background-color:#FBFBFF;">
+			
+			
+    			<div class="swiper-slide slide0 chalk-map swiper-slide-active" style="height: 530px;">
+    			<span class="no">0</span>
+    				<div class="swiper-text" style="width:10%;position:absolute;left:47%;top:87%">
+    				<img src="../image/jiantou.png" height="30px" alt="jaintou" />
+    				</div>
+    				<div font-family="Microsoft YaHei" style="width:100%;position:absolute;top:6%">
+	    				<div class="title_div"  style="width:100%;color:#272727;opacity: 1;text-align:center;">
+	    				<font size="5" ><strong>中国高等教育地区图景一览</strong></font>
+	    				</div>
+	    				
+	    				<div class="title_div"  style="width:100%;color:#272727;opacity: 1;text-align:center;">
+					    	<font size="4" >高等教育资源这块“蛋糕”该怎么分？</font>
+					    </div>
+					    <div class="byline" font-family="Microsoft YaHei" style="color:#272727;opacity: 1;top:7%;text-align:center;">
+					    
+					    	By zjuers<br>
+						    <em>ZJU Datanews Team</em> <br>
+						    <span class="pubdate" style="color:#272727;text-align:center;">Aug. 12, 2017</span>
+					    </div>
+	
+						<div id="componentDivFirstSlide" style="color:#4F4F4F;opacity: 1;"></div>
+						
+						<p></p>
+						
+					</div>
+			
+					
+
+                  
+				<span class="no">1</span>
+				
+					<div id="mapDiv"  font-family="Microsoft YaHei" style="position:absolute;left:5%;top:20%;width:90%;height:90%;overflow:hidden"></div>
+				    <script type="text/javascript">
+				    var mychart = echarts.init(document.getElementById("mapDiv"));
+					var option = {
+						    series: [{
+						        type: 'liquidFill',
+						        data: [0.6, 0.55, 0.4, 0.25],
+						        radius: '90%',
+						        outline: {
+						            show: false
+						        },
+						        backgroundStyle: {
+						            borderColor: '#156ACF',
+						            borderWidth: 1,
+						            shadowColor: 'rgba(0, 0, 0, 0.4)',
+						            shadowBlur: 20
+						        },
+						        shape: 'path://M940.84 382.65v157.286l33.109 33.12-69.04 71.848-69.893-69.73 47.863-43.516V407.48c-203.082 83.734-268.184 109.76-313.222 130.078s-77.47 20.216-122.141 3.383-257.32-94.44-362.91-144.975C14.15 362.25 9.613 340.871 85.82 312.258c99.452-37.784 263.829-98.29 350.966-131.314 51.578-20.867 78.85-32.257 126.193-8.462 84.539 34.906 277.702 107.39 373.752 147.047 83.613 36.494 27.403 48.495 4.108 63.121zM579.45 599.818c49.11-20.263 115.33-53.769 187.535-84.703v248.354s-93.38 99.339-257.54 99.339c-176.788 0-272.279-99.339-272.279-99.339V531.658c55.725 22.704 118.308 42.239 194.037 68.16 46.675 16.608 105.903 22.35 148.248 0z',
+						        label: {
+						            normal: {
+						                position: ['50%', '55%'],
+						                formatter: function() {
+						                    return 'Welcome to \n china college education \n information \n \n \n   \n \n 985\n ——————————— \n east  | midland |  west \n ——————————— ';
+						                },
+						                textStyle: {
+						                    fontSize: 18,
+						                    color: '#005AB5'
+						                }
+						            }
+						        }
+						    }]
+				
+						};
+					mychart.setOption(option);
+				    </script>
+				 </div>
+				 
+				  <div class="swiper-slide slide2 chalk-map" style="height: 90hv;">
+				  <span class="no">2</span>
+				  <div class="swiper-text" style="width:10%;position:absolute;left:47%;top:87%">
+    				<img src="../image/jiantou.png" height="30px" alt="jaintou" />
+    				</div>
+				    <div class="swiper-text" style="color:black;width:33%;top:5%;left:34%""><span class="no">4</span><p class="middle"><font size=5> 在中国，有两所<strong>家喻户晓</strong>的大学</font></p></div>
+					<div style=" position:absolute;top:25%; left:39%;width:2%;height:2%;"><img src="../image/shangjiao.png"  height="100px" alt="上交" /></div>
+					<div style=" position:absolute;top:25%; left:53%;width:2%;height:2%;"><img src="../image/xijiao.png"  height="100px"  alt="西交"  /></div>
+					<div style="height:300px;width:40%;text-align:justify;position:absolute;top:45%; left:30%;">
+					<p class="middle">
+					<font size="3" color="#3C3C3C">它们同根于中国近代著名实业家、教育家盛宣怀1896年在上海创办的“南洋公学”，
+				    	后于1949年更名为“交通大学”。1955年，学校迁往西安，分为交通大学上海部分和西安部分,<strong>1959年两部分独立建制，分别定名为“上海交通大学”和“西安交通大学”</strong>。两校均为我国“211工程”、“985工程”重点建设的大学之一，被国家确定为以建设世界知名高水平大学为目标的教育部直属全国重点大学，是中国九校联盟（C9）成员高校。</font></p>
+				  	  <p></p>
+				  	 
+		 </div>
+				</div>
+				 
+				 
+				  <div class="swiper-slide slide3 chalk-map" style="height: 90hv;">
+				  <span class="no">3</span>
+				  <div class="swiper-text" style="width:10%;position:absolute;left:47%;top:87%">
+    				<img src="../image/jiantou.png" height="30px" alt="jaintou" />
+    				</div>
+				    <div class="swiper-text" style="color:black;text-align:justify;position:absolute;top:26%;left:72%;width:24%">
+				    <p class="middle">
+				    <font size="3" color="#3C3C3C">决定一所大学综合实力的首要因素就是大学的科研能力，在上世纪八、九十年代人的印象里，社会对西安交大的认可程度是略大于上海交大的，
+				  	  然而在中国校友会网近10年发布的中国大学排行榜中，上海交大的综合排名和评分都远超西安交大，甚至有网友发帖称“过去十几年里，上海交大和西安交大分别是中国大学进步最快和退步最快的。”</font>
+					<br>
+					<font size="3" color="#3C3C3C"><strong>它们的差距到底有多大呢？</strong></font></p>
+				</div>
+				
+				 <div id="mapDiv6" style="position:absolute;top:4%;width:100%;height:90%;overflow:hidden">
+				 <script type="text/javascript">
+					    mychart = echarts.init(document.getElementById("mapDiv6"));
+						option = {
+								 title : {
+								        text: '上交 vs 西交大学排名',
+								        subtext: '数据来源中国校友会网',
+								        left: 'center',
+					    	            textStyle: {
+								            color: '#272727',
+								            fontSize:25,
+								        }
+								    },
+							    tooltip : {
+							        trigger: 'axis'
+							    }, 
+							    calculable : true,
+							    legend: {
+							        data: ['上海交通大学', '西安交通大学'],
+							        itemGap: 10,
+						            orient: 'horizontal',
+							        textStyle: {
+							            //color: '#fff',
+							            fontSize: 14
+							        },
+							       left:'center',
+							       top:'12%'
+							        //selectedMode: 'single'
+							    },
+							    grid: {
+							    	width:'60%',
+							    	left:'5%'
+							    	
+							    },
+							    xAxis : [
+							        {
+							            type : 'category',
+							            data : ['2007','2008','2009','2010','2011','2012','2013','2014','2015','2016'],
+							            
+							        }
+							    ],
+							    yAxis : [
+							        {
+							            type : 'value',
+							            splitLine: {
+							                show: false,
+							                
+							            },
+							           
+							        }
+							    ],
+							    series : [
+							        {
+							            name:'上海交通大学',
+							            type:'bar',
+							            data:[3,3,3,5,5,5,5,3,7,7],
+							            itemStyle: {
+							                normal: {
+							                    color: '#AA0000'
+							                }
+							            },
+							            markPoint : {
+							                data : [
+							                    {type : 'max', name: '最大值'},
+							                    {type : 'min', name: '最小值'}
+							                ]
+							            },
+							            markLine : {
+							                data : [
+							                    {type : 'average', name: '平均值'}
+							                ]
+							            }
+							        },
+							        {
+							            name:'西安交通大学',
+							            type:'bar',
+							            data:[23,20,22,21,18,17,16,18,17,17],
+							            itemStyle: {
+							                normal: {
+							                    color: '#004B97'
+							                }
+							            },
+							            markPoint : {
+							                data : [
+							                	 {type : 'max', name: '最大值'},
+								                 {type : 'min', name: '最小值'}
+							                ]
+							            },
+							            markLine : {
+							                data : [
+							                    {type : 'average', name : '平均值'}
+							                ]
+							            }
+							        }
+							    ]
+							};
+
+						mychart.setOption(option);
+						</script>
+				 </div>
+				
+				</div>
+				
+				 <div class="swiper-slide slide4 chalk-map swiper-slide-next" style="height: 90hv;">
+				 <span class="no">4</span>
+				 <div class="swiper-text" style="width:10%;position:absolute;left:47%;top:87%">
+    				<img src="../image/jiantou.png" height="30px" alt="jaintou" />
+    				</div>
+				 
+				   <div id="mapDiv5" style="position:absolute;top:4%;width:100%;height:90%;overflow:hidden"></div>
+				    
+				    <div class="swiper-text" style="color:#3C3C3C;text-align:justify;position:absolute;top:30%; left:72%;width:24%;">
+				    <p class="middle"><font size=3>2012-2016年,除了研究成果鉴定数，上海交大的<strong>科研经费投入和科研成果产出</strong>均远超过西安交大。</font>
+				    <br>
+				    <font size=3>上海交大和西安交大的差异只是我国教育资源分布的一个缩影，<strong>那我国其他省份之间的情况呢，是否也存在较大的地区差异？</strong>众所周知，<strong>我国有“985工程”，“211工程”，是否也存在明显的差别呢？</strong></font></p>
+				    
+				    </div>
+				    <script type="text/javascript">
+				    function tooltipmapDiv5(params){
+						var valuesFormatter = [];
+						
+						if(params.value!= 0){
+					        valuesFormatter
+					            .push('<div style="width:40%;border-bottom: 1px solid rgba(255,255,255,.3); font-size: 18px;padding-bottom: 7px;margin-bottom: 7px">' +
+					                '985高校数量' +
+					                '<br>' +
+					                '</div>' +'<div style="width:40%;">'+
+					                '<span style="color:#3C3C3C' +
+					                params.color +
+					                '">' + params.seriesName + '</span>: ' +
+					                 '<br>科研经费总量： '+ params.value[0] +'千元 <br>政府科研经费量： '+params.value[1] +'千元 <br>非政府科研经费量： '+params.value[2] +
+					                 '千元 <br>学术论文数量： '+params.value[3]+'篇 <br>鉴定成果数： '+params.value[4]+'件<br>当年实际收入： '+
+					                 params.value[5]+'千元</div>');}
+						else {
+							valuesFormatter
+				            .push('<div style="border-bottom: 1px solid rgba(255,255,255,.3); font-size: 18px;padding-bottom: 7px;margin-bottom: 7px">' +
+				                '985高校数量' +
+				                '<br>' +
+				                '</div>' +
+				                '<span style="color:#3C3C3C' +
+				                params.color +
+				                '">' + params.name + '</span>: ' + '该省无985院校');
+						}
+					        return valuesFormatter;
+					}
+					    mychart = echarts.init(document.getElementById("mapDiv5"));
+						option = {
+								
+								baseOption:{
+									timeline: {
+										// y: 0,
+							            axisType: 'category',
+							            // realtime: false,
+							            // loop: false,
+							            autoPlay: true,
+							            // currentIndex: 2,
+							            playInterval: 2000,
+							            orient:'vertical',
+							            left:'4%',
+						                 top: '20%',
+						                 bottom: '10%',
+						                 width: 55,
+						                 inverse: true,
+							            //bottom: '10%',
+							            // controlStyle: {
+							            //     position: 'left'
+							            // },
+							            data: [
+							                '2012',
+							                {
+							                    value: '2013',
+							                    tooltip: {
+							                        formatter: '{b}年 “十二五”开局之年'
+							                    },
+							                    symbol: 'diamond',
+							                    symbolSize: 16
+							                } ,'2014','2015', {
+							                    value: '2016',
+							                    tooltip: {
+							                        formatter: '{b}年 提出建设“双一流”发展战略'
+							                    },
+							                    symbol: 'diamond',
+							                    symbolSize: 16
+							                } 
+							            ],
+							            label: {
+							                formatter : function(s) {
+							                    return (new Date(s)).getFullYear();
+							                }
+							            }
+							        },
+							        title: {
+							            text: '上海交通大学 vs 西安交通大学 科研经费与科研成果',
+							            subtext: '数据来源教育部科技司',
+							            left: 'center',
+							            top:15,
+					    	            textStyle: {
+								            color: '#272727',
+								            fontSize:25,
+								        }
+							        },
+							        tooltip: {
+							        	trigger: 'item',
+							        	formatter:tooltipmapDiv5
+							        },       
+						    legend: {
+						        bottom: 5,
+						        data: ['上海交通大学', '西安交通大学'],
+						        left:'center',
+					            orient: 'horizontal',
+					            top:'13%',
+						        textStyle: {
+						            //color: '#fff',
+						            fontSize: 14
+						        },
+						        //selectedMode: 'single'
+						    },
+						  grid:[
+							  {x: '7%', y: '7%', width: '38%', height: '38%'},
+						  ],
+						    radar: {
+						    	gridIndex:0,
+						    	 center: ['40%', '58%'],
+						    	 radius: '70%',
+						        indicator: [
+						            {name: '科研经费总量', max: 3500000},
+						            {name: '政府科研经费量', max: 2700000},
+						            {name: '非政府科研经费量', max: 1000000},
+						            {name: '学术论文数量', max: 21000},
+						            {name: '鉴定数', max: 60},
+						            {name: '当年实际收入', max: 220000}
+						        ],
+						        shape: 'diamond',
+						        splitNumber: 5,
+						        name: {
+						            textStyle: {
+						                color: '#3C3C3C'
+						            }
+						        },
+						        splitLine: {
+						              lineStyle: {
+						                  color: '#6C6C6C',
+						                  opacity: .2
+						              }
+						          },
+						          splitArea: {
+						              areaStyle: {
+						                  color: '#ECF5FF',
+						                  opacity: 1,
+						                  shadowBlur: 45,
+						                  shadowColor: 'rgba(0,0,0,.5)',
+						                  shadowOffsetX: 0,
+						                  shadowOffsetY: 15,
+						              }
+						          }
+						    },
+						    series: allSeries5.slice(0,2)
+						    	},
+						    options: []
+						};
+					
+						for(var n = 0; n<5 ;n++){
+							option.options.push({
+								title: {
+						            text: timedata[n]+'上海交通大学 vs 西安交通大学 科研经费与科研成果',
+							        left: 'center',
+							       
+				    	            textStyle: {
+							            color: '#272727',
+							            fontSize:25,
+							        }
+						        },
+								series: allSeries5.slice(2*n,2*n+2)
+							})
+						}
+					mychart.setOption(option);
+				    </script>
+				 </div>
+				 
+				  
+				 
+				 
+				 <div class="swiper-slide slide5 chalk-map" style="height: 90hv;">
+				 <span class="no">5</span>
+				 <div class="swiper-text" style="width:10%;position:absolute;left:48%;top:87%">
+    				<img src="../image/jiantou.png" height="30px" alt="jaintou" />
+    				</div>
+				    <div  style="position:absolute;text-align:center;left:20%;top:52%;width:60%">
+				   <p class="middle"> <font size="3" color="#3C3C3C">“985”和“211”就是国家圈定的要重点扶持的高等院校。<br>这三个数字，
+		意味着极大的政策、拨款倾斜，它们享受着更多的、更好的优势教育资源。<br>它们的分布及发展情况一定程度上代表着我国高校教育资源的分布状况。</font>
+				    <font size="3" color="#3C3C3C"><br>全国共有<strong>112所“211”学校，分布在31个省市</strong>。
+<strong><br>38所“985”高校，仅分布在18个省市。</strong><br>（国防科技大学除外，其所属于军事系统）
+				    </font>
+				   <br>
+				   <br>
+					<font size="3" color="#3C3C3C"><strong>那这个38所院校的地理分布是怎样的呢？</strong></font></p>
+					<br>
+				  
+				</div>
+				
+				<div  style="position:absolute;left:50%;top:23%">
+				   
+					<font size="5" color="#3C3C3C">中部</font>
+				</div>
+				<div  style="position:absolute;left:28%;top:23%">
+				   
+					<font size="5" color="#3C3C3C">东部</font>
+				</div>
+				<div  style="position:absolute;left:71%;top:23%">
+				   
+					<font size="5" color="#3C3C3C">西部</font>
+				</div>
+				
+				 <div id="mapDiv7" style="width:80%;height:50%;position:absolute;left:10%;top:4%;overflow:hidden">
+				 
+				 <script type="text/javascript">
+					    mychart = echarts.init(document.getElementById("mapDiv7"));
+						option = {
+								 title : {
+								        text: '211、985高校各省数量',
+								        subtext: '数据来源教育部科技司',
+								        left: 'center',
+								        top: 15,
+					    	            textStyle: {
+								            color: '#272727',
+								            fontSize:25,
+								        }
+								    },
+							    tooltip : {
+							        trigger: 'axis'
+							    }, 
+							    calculable : true,
+							    
+							    legend: {
+							    	orient: 'horizontal',
+							        right: 'center',
+							        top: '25%',
+							        data:['211数量','985数量']
+							    },
+							    xAxis : [
+							        {
+							            type : 'category',
+							            data : ['北京','天津','河北','辽宁','上海','江苏','浙江','福建','山东','广东','海南','广西', '','黑龙江','吉林','山西','安徽','江西','河南','湖北','湖南','内蒙古','','四川','重庆','贵州','云南','西藏','陕西','甘肃','青海','宁夏','新疆']
+							        }
+							    ],
+							    yAxis : 
+							        {
+							            type : 'value',
+							            splitLine: {
+							                show: false,
+							                
+							            },
+							        }
+							   ,
+							    series : [
+							        {
+							            name:'211数量',
+							            type:'bar',
+							            xAxisIndex: 0,
+							            yAxisIndex: 0,
+							            data:[26,4,1,4,9,11,1,2,2,4,1,1, ,4,3,1,3,1,1,7,3,1, ,5,2,1,1,1,7,1,1,1,2],
+							            
+							            markPoint : {
+							                data : [
+							                    {type : 'max', name: '最大值'},
+							                    {type : 'min', name: '最小值'}
+							                ]
+							            },
+							            markLine : {
+							                data : [
+							                    {type : 'average', name: '平均值'}
+							                ]
+							            }
+							        },
+							        {
+							            name:'985数量',
+							            type:'bar',
+							            xAxisIndex: 0,
+							            yAxisIndex: 0,
+							            data:[8,2,0,2,4,2,1,1,2,2,0,0, ,1,1,0,1,0,0,2,2,0,,2,1,0,0,0,3,1,0,0,0],
+							            itemStyle: {
+							                normal: {
+							                    color: '#004B97'
+							                }
+							            },
+							            markPoint : {
+							                data : [
+							                	 {type : 'max', name: '最大值'},
+								                    {type : 'min', name: '最小值'}
+							                ]
+							            },
+							            markLine : {
+							                data : [
+							                    {type : 'average', name : '平均值'}
+							                ]
+							            }
+							        }
+							    ]
+							};
+
+						mychart.setOption(option);
+						</script>
+				 </div>
+				
+				</div>
+				
+				
+				 
+				 <div class="swiper-slide slide6 chalk-map swiper-slide-next" style="height: 90hv;">
+				 <span class="no">6</span>
+				 <div class="swiper-text" style="width:10%;position:absolute;left:47%;top:87%">
+    				<img src="../image/jiantou.png" height="30px" alt="jaintou" />
+    				</div>
+				 	<div class="swiper-text" style="color:#3C3C3C;text-align:justify;position:absolute;top:17%; left:72%;width:24%;height:200px;">
+				 	<p class="middle"><font size=3>大学对所在地具有较强的辐射带动作用，大学的科研能力、人才储备、校友资源和招商引资能力对当地的经济发展和社会建设发挥着重要的作用，同时，当地的经济发展状况也影响着大学的分布。
+  					<strong>而“985工程”高校代表着我国高校科研教育事业的最高水平，</strong>它的分布情况，一定程度上代表着我国高校教育资源的分布情况，是了解我国各地区的经济社会发展的一面镜子。</font>
+  					<br>
+  					<font size=3>由左饼图可见，东部地区985高校数量明显高于中西部。<strong>但数量并不代表质量，那各省的具体实力对比又是怎样的呢？</strong></font></p>
+				 	</div>
+				 	<div style="color:#3C3C3C;position:absolute;top:70%; left:75%;height:200px;">
+				 	
+				 	</div>
+				 	
+				     <div id="mapDiv1" style="position:absolute;top:4%;width:100%;height:90%;overflow:hidden"></div>
+				    <script>
+				    function tooltipmapDiv1(params){
+						var valuesFormatter = [];
+						
+						if(params.value!= 0){
+					        valuesFormatter
+					            .push('<div style="width:40%;border-bottom: 1px solid rgba(255,255,255,.3); font-size: 18px;padding-bottom: 7px;margin-bottom: 7px">' +
+					                '985高校数量' +
+					                '<br>' +
+					                '</div>' +'<div style="width:40%;">'+
+					                '<span style="color:#3C3C3C' +
+					                params.color +
+					                '">' + params.name + '</span>: ' +'拥有 '+ params.value +'所985院校 '+ '</div>');}
+						else {
+							valuesFormatter
+				            .push('<div style="border-bottom: 1px solid rgba(255,255,255,.3); font-size: 18px;padding-bottom: 7px;margin-bottom: 7px">' +
+				                '985高校数量' +
+				                '<br>' +
+				                '</div>' +
+				                '<span style="color:#3C3C3C' +
+				                params.color +
+				                '">' + params.name + '</span>: ' + '该省无985院校');
+						}
+					        return valuesFormatter;
+					}
+						mychart = echarts.init(document.getElementById("mapDiv1"));
+							
+							option = {
+							 title: {
+						        text: '985高校东中西部数量分布',
+						        subtext: '数据来源教育部科技司',
+						       	right:'center',
+						        top: 15,
+			    	            textStyle: {
+						            color: '#272727',
+						            fontSize:25,
+						        }
+						    },
+						    tooltip: {
+						        trigger: 'item',
+						     	formatter: tooltipmapDiv1
+						    },
+						    legend: {
+						    
+						    	show: true,
+						        orient: 'vertical',
+						        left: '10%',
+						        top: '20%',
+						        data:['东部','中部','西部']
+						    },
+						    geo: {
+			    	            map: 'china',
+			    	            top:'17%',
+					            left:'16%',
+			    	            label: {
+			    	                emphasis: {
+			    	                    show: false
+			    	                }
+			    	            },
+			    	            itemStyle: {
+			    	                normal: {
+			    	                    areaColor: areacolors[0],
+			    	                    borderColor: '#ECF5FF'
+			    	                },
+			    	                emphasis: {
+			    	                    areaColor: areacolors[0]
+			    	                }
+			    	            }
+			    	        },
+			    	        visualMap:[{
+			    	            min: 0,
+			    	            max: 10,
+			    	            left: 130,
+						           bottom: 40,
+			    	            text: ['最高','最低'],           // �ı���Ĭ��Ϊ��ֵ�ı�
+			    	             inRange: {
+			    	            	 color: colors[0],
+			    	                },
+			    	            calculable: true
+			    	        },
+			    	       {
+			    	        	min: 0,
+			    	        	max: 10,
+			    	        	left: 'left',
+			    	        	seriesIndex:3,
+			    	        	top: 'bottom',
+			    	        	text: ['所',''],           // �ı���Ĭ��Ϊ��ֵ�ı�
+			    	        	
+			    	        	calculable: true,
+			    	        	show:false
+			    	        }],
+						    toolbox: {
+						        show: true,
+						        orient: 'vertical',
+						        left: 'right',
+						        top: 'center',
+						        feature: {
+						            dataView: {readOnly: false},
+						            restore: {},
+						            saveAsImage: {}
+						        }
+						    },
+						    series: [
+						        {
+						            name: '东部',
+						            type: 'map',
+						            mapType: 'china',
+						            top:'17%',
+						            left:'16%',
+						            itemStyle: {
+				    	                normal: {
+				    	                    areaColor: areacolors[0],
+				    	                    borderColor: '#ECF5FF'
+				    	                },
+				    	                emphasis: {
+				    	                    areaColor: areacolors[0]
+				    	                }
+				    	            },
+						            roam: true,
+						            label: {
+						                normal: {
+						                    show: true
+						                },
+						                emphasis: {
+						                    show: true
+						                }
+						            },
+						            data:value[0]
+								},
+								{
+						            name: '中部',
+						            type: 'map',
+						            mapType: 'china',
+						            roam: true,
+						            label: {
+						                normal: {
+						                    show: true
+						                },
+						                emphasis: {
+						                    show: true
+						                }
+						            },
+						            data:value[1]
+								},
+								{
+						            name: '西部',
+						            type: 'map',
+						            mapType: 'china',
+						            roam: true,
+						            label: {
+						                normal: {
+						                    show: true
+						                },
+						                emphasis: {
+						                    show: true
+						                }
+						            },
+						            data:value[2]
+								},
+								{
+						        type:'pie',
+						        radius : '20%',
+						        center: ['63%', '57%'],
+						        data:[
+						        	{value:24, name:'东部'},
+						        	{value:7,  name:'中部'},
+						       		{value:7,  name:'西部'}
+						       		].sort(function (a, b) { return a.value - b.value; }),
+						        	 roseType: 'radius',
+						            label: {
+						                normal: {
+						                	show:true,
+						                   
+						                    formatter: '  {b}  \n {c} 所'
+						                }
+						            },
+						            labelLine: {
+						                normal: {
+						                    
+						                    smooth: 0.2,
+						                    length: 5,
+						                    length2: 5,
+						                    show:true
+						                }
+						            },
+						            itemStyle: {
+						                normal: {
+						                    shadowBlur: 100,
+						                    shadowColor: '#D2E9FF'
+						                }
+						            },
+						
+						            animationType: 'scale',
+						            animationEasing: 'elasticOut',
+						            animationDelay: function (idx) {
+						                return Math.random() * 200;
+						            }
+						            
+						           }
+								],
+								
+							}
+							mychart.setOption(option);
+				    </script>
+				 </div>
+				  
+				  
+				 <div class="swiper-slide slide7 chalk-map swiper-slide-next" style="height: 80hv;">
+				 <span class="no">7</span>
+				 <div class="swiper-text" style="width:10%;position:absolute;left:47%;top:87%">
+    				<img src="../image/jiantou.png" height="30px" alt="jaintou" />
+    				</div>
+				 <div class="swiper-text" style="color:#3C3C3C;text-align:justify;position:absolute;top:55%; left:72%;width:24%;">
+				 	<p class="middle"><font size=3>由上图，明显可见<strong>东部地区</strong>985高校的科研经费超过<strong>中西部</strong>985高校科研经费总和，近中西部的两倍，且北京市总额远超其他省份。</font>
+				 	<br>
+				 	<font size=3><strong>但各省的985高校数量不一，那具体到每一所学校呢？</strong></font></p>
+				 	
+				 	</div>
+				 	
+				    <div id="mapDiv2" style="position:absolute;top:4%;width:100%;height:90%;overflow:hidden"></div>
+				 	<script type="text/javascript">
+				 	
+							mychart = echarts.init(document.getElementById("mapDiv2"));
+							option = {
+									baseOption: {
+										 timeline: {
+									            // y: 0,
+									            axisType: 'category',
+									            // realtime: false,
+									            // loop: false,
+									            autoPlay: true,
+									            // currentIndex: 2,
+									            playInterval: 2000,
+									            orient:'vertical',
+								                 left:'4%',
+								                 top: '20%',
+								                 bottom: '10%',
+								                 width: 55,
+								                 inverse: true,
+									            // controlStyle: {
+									            //     position: 'left'
+									            // },
+									            data: [
+									                '2012',
+									                {
+									                    value: '2013',
+									                    tooltip: {
+									                        formatter: '{b}年 “十二五”开局之年'
+									                    },
+									                    symbol: 'diamond',
+									                    symbolSize: 16
+									                } ,'2014','2015', {
+									                    value: '2016',
+									                    tooltip: {
+									                        formatter: '{b}年 提出建设“双一流”发展战略'
+									                    },
+									                    symbol: 'diamond',
+									                    symbolSize: 16
+									                } 
+									            ],
+									            
+									        },
+									        title: {
+									            text: '985高校科研经费东中西部各省总体概况',
+									            right:'center',
+									            top: 15,
+							    	            textStyle: {
+										            color: '#272727',
+										            fontSize:25,
+										        }
+									        },
+									        tooltip: {
+									          	 
+									          },
+									        angleAxis: {
+									            type: 'category',
+									            data: ['中部','西部','东部'],
+									            z: 5,
+									            splitNumber:3,
+									            interval:3,
+									            clockwise: false,
+									            axisLine:{
+									            	show:false,
+									            }
+									            
+									        },
+									        radiusAxis: {
+									        },
+									        polar: {
+									        	center: ['84%', '34%'],
+									        	radius: '15%',
+									        },
+									        legend: {
+									           show: true,
+									            data:['政府经费[亿元]','非政府经费[亿元]'],	
+									            right:'7%',
+									            orient: 'horizontal',
+									            top:'53%',
+									            textStyle:{
+									            	fontSize:4
+									            }
+									        },
+									        geo: {
+									            map: 'china',
+									            top:'17%',
+									            left:'16%',
+									            label: {
+									                emphasis: {
+									                    show: true
+									                }
+									            },
+									            itemStyle: {
+							    	                normal: {
+							    	                    areaColor: areacolors[0],
+							    	                    borderColor: '#ECF5FF'
+							    	                },
+							    	                emphasis: {
+							    	                    areaColor: areacolors[0]
+							    	                }
+							    	            },
+									        },
+									        visualMap: {
+									            min: 0,
+									            max: 150,
+									            
+									            left: 130,
+									           bottom: 40,
+									           padding: [0, 0],
+									            text: ['[亿元]',''],           // �ı���Ĭ��Ϊ��ֵ�ı�
+									            inRange: {
+									            	color: colors[0]
+									            },
+									            calculable: true
+									        },series: allSeries2.slice(0,2)
+									},
+									options: []
+							};
+							for(var n = 0; n<5 ;n++){
+								option.options.push({
+									 title: {
+								            text: timedata[n]+'985高校科研经费东中西部及各省总体概况',
+								            subtext: '数据来源教育部科技司',
+									        left: 'center',
+									        top: 15,
+						    	            textStyle: {
+									            color: '#272727',
+									            fontSize:25,
+									        }
+								        },
+									series: allSeries2.slice(4*n,4*n+4)
+								})
+							}
+							mychart.setOption(option);
+				
+				
+				</script>
+				 </div>
+				  
+				  
+				 <div class="swiper-slide slide8 chalk-map swiper-slide-next" style="height: 90hv;">
+				 <span class="no">8</span>
+				 <div class="swiper-text" style="width:10%;position:absolute;left:47%;top:87%">
+    				<img src="../image/jiantou.png" height="30px" alt="jaintou" />
+    				</div>
+				  <div class="swiper-text" style="color:#3C3C3C;text-align:justify;position:absolute;top:55%; left:72%;;width:24%;height:200px;">
+				 	<p class="middle"><font size=3>将科研经费<strong>平均到各省内每所学校</strong>时，东中部差距缩小，西部地区劣势明显，东部浙江省一家独大，北京上海存在相应的平均效应。</font>
+				 	<br>
+				 	<font size=3><strong>在科研投入存在差距的情况下，其科研成果情况又怎样呢？</strong></font></p>
+				 	</div>
+				 	
+				     <div id="mapDiv3" style="position:absolute;top:4%;width:100%;height:90%;overflow:hidden"></div>
+				    <script>
+				    function tooltipmapDiv3(params){
+						var valuesFormatter = [];
+						
+						if(params.value!= 0){
+					        valuesFormatter
+					            .push('<div style="width:40%;border-bottom: 1px solid rgba(255,255,255,.3); font-size: 18px;padding-bottom: 7px;margin-bottom: 7px">' +
+					                '985高校科研经费情况' +
+					                '<br>' +
+					                '</div>' +'<div style="width:40%;">'+
+					                '<span style="color:#3C3C3C' +
+					                params.color +
+					                '">' + params.name + '</span>: ' +'拥有 '+ params.value +'000元科研经费'+ '</div>');}
+						else {
+							valuesFormatter
+				            .push('<div style="border-bottom: 1px solid rgba(255,255,255,.3); font-size: 18px;padding-bottom: 7px;margin-bottom: 7px">' +
+				                '985高校科研经费情况' +
+				                '<br>' +
+				                '</div>' +
+				                '<span style="color:#3C3C3C' +
+				                params.color +
+				                '">' + params.name + '</span>: ' + '该省无985院校科研经费');
+						}
+					        return valuesFormatter;
+					}
+    mychart = echarts.init(document.getElementById("mapDiv3"));
+    var option = {
+    		
+    		baseOption:{
+    			timeline: {
+    	            // y: 0,
+		            axisType: 'category',
+		            // realtime: false,
+		            // loop: false,
+		            autoPlay: true,
+		            // currentIndex: 2,
+		            playInterval: 2000,
+		            orient:'vertical',
+		            left:'4%',
+	                 top: '20%',
+	                 bottom: '10%',
+	                 width: 55,
+	                 inverse: true,
+    	            data: [
+    	                '2012',
+    	                {
+    	                    value: '2013',
+    	                    tooltip: {
+    	                        formatter: '{b}年 “十二五”开局之年'
+    	                    },
+    	                    symbol: 'diamond',
+    	                    symbolSize: 16
+    	                } ,'2014','2015', {
+    	                    value: '2016',
+    	                    tooltip: {
+    	                        formatter: '{b}年 提出建设“双一流”发展战略'
+    	                    },
+    	                    symbol: 'diamond',
+    	                    symbolSize: 16
+    	                } 
+    	            ],
+    	            label: {
+    	                formatter : function(s) {
+    	                    return (new Date(s)).getFullYear();
+    	                }
+    	            }
+    	        },
+    	        title: {
+    	            text: '985高校科研经费东中西部各省各高校平均情况',
+    	            subtext: '数据来源教育部科技司',
+			        left: 'center',
+			        top: 15,
+    	            textStyle: {
+			            color: '#272727',
+			            fontSize:25,
+			        }
+    	        },
+    	        tooltip: {
+		          	 
+		          },
+		        angleAxis: {
+		            type: 'category',
+		            data: ['中部','西部','东部'],
+		            z: 5,
+		            splitNumber:3,
+		            interval:3,
+		            clockwise: false,
+		            axisLine:{
+		            	show:false,
+		            }
+		            
+		        },
+		        radiusAxis: {
+		        },
+    	        polar: {
+    	        	center: ['84%', '34%'],
+    	        	radius: '15%',
+    	        },
+    	        legend: {
+    	        	show: true,
+		            data:['政府经费[亿元]','非政府经费[亿元]'],	
+		            right:'7%',
+		            orient: 'horizontal',
+		            top:'55%',
+		            textStyle:{
+		            	fontSize:4
+		            }
+    	        },
+    	        geo: {
+    	            map: 'china',
+    	            top:'17%',
+		            left:'16%',
+    	            label: {
+    	            	normal: {
+    	            		 show: true,
+     	                    textStyle: {
+     	    		            color: '#3C3C3C'
+     	    		        }
+    	            	},
+    	                emphasis: {
+    	                    show: true,
+    	                    textStyle: {
+    	    		            color: '#3C3C3C'
+    	    		        }
+    	                }
+    	            },
+    	            itemStyle: {
+    	                normal: {
+    	                    areaColor: areacolors[0],
+    	                    borderColor: '#ECF5FF'
+    	                },
+    	                emphasis: {
+    	                    areaColor: areacolors[0]
+    	                }
+    	            }
+    	        },
+    	        tooltip: {
+    	            trigger: 'item',
+    	            
+    	        },
+    	        visualMap: {
+    	            type: 'continuous',
+    	            min: 0,
+    	            max: 41,
+    	            left: 130,
+			           bottom: 40,
+			           padding: [0, 0],
+			            text: ['[亿元]',''],
+    	            textStyle: {
+    		            color: '#3C3C3C'
+    		        },
+    	            calculable: true,
+    	            inRange: {
+    	                color:colors[0],
+    	                symbolSize: [3, 25]
+    	            },
+    	            
+    	        },
+    	        series : allSeries3.slice(0,2)
+    	    },
+    	    options: []
+    	};
+    for(var n = 0; n<5 ;n++){
+    	option.options.push({
+    		 title: {
+ 	            text: timedata[n]+'985高校科研经费东中西部各省各高校平均情况',
+ 	           subtext: '数据来源教育部科技司',
+		        left: 'center',
+		        top: 15,
+ 	            textStyle: {
+			            color: '#272727',
+			            fontSize:25,
+			        }
+ 	        },
+    		series: allSeries3.slice(5*n,5*n+5)
+    	})
+    }
+    mychart.setOption(option);
+    </script>
+				 </div>
+				  <div class="swiper-slide slide9 chalk-map" style="height: 90hv;">
+				<span class="no">9</span>
+				<div class="swiper-text" style="width:10%;position:absolute;left:47%;top:87%">
+    				<img src="../image/jiantou.png" height="30px" alt="jaintou" />
+    				</div>
+				 <div class="swiper-text" style="color:#3C3C3C;text-align:justify;position:absolute;top:27%; left:72%;width:24%;height:200px;">
+				 	<p class="middle"><font size=3>过去5年，<strong>东部地区985高校平均科研成果明显高于中西部地区。</strong></font><br>
+				 	<font size=3> 从前面的系列图表中，我们可以直观地看到我国东中西部地区科研经费投入差距较大，而导致东中西部地区的科研成果产出也存在着较大差距，与科研经费的投入基本呈正相关性。</font>
+				 	<font size=3> <strong>而具体的东中西部各省份的情况又怎样呢？</strong></font></p>
+				 	</div>
+				<div id="mapDiv10" style="position:absolute;top:4%;width:100%;height:90%;overflow:hidden">
+				 <script type="text/javascript">
+					    mychart = echarts.init(document.getElementById("mapDiv10"));
+						option = {
+								
+								baseOption:{
+					    			timeline: {
+					    	            // y: 0,
+							            axisType: 'category',
+							            // realtime: false,
+							            // loop: false,
+							            autoPlay: true,
+							            // currentIndex: 2,
+							            playInterval: 2000,
+							            orient:'vertical',
+							            left:'4%',
+						                 top: '20%',
+						                 bottom: '10%',
+						                 width: 55,
+						                 inverse: true,
+					    	            data: [
+					    	                '2012',
+					    	                {
+					    	                    value: '2013',
+					    	                    tooltip: {
+					    	                        formatter: '{b}年 “十二五”开局之年'
+					    	                    },
+					    	                    symbol: 'diamond',
+					    	                    symbolSize: 16
+					    	                } ,'2014','2015', {
+					    	                    value: '2016',
+					    	                    tooltip: {
+					    	                        formatter: '{b}年 提出建设“双一流”发展战略'
+					    	                    },
+					    	                    symbol: 'diamond',
+					    	                    symbolSize: 16
+					    	                } 
+					    	            ],
+					    	            label: {
+					    	                formatter : function(s) {
+					    	                    return (new Date(s)).getFullYear();
+					    	                }
+					    	            }
+					    	        },
+								title : {
+								        text: '985高校科研成果汇总',
+								        subtext: '数据来源教育部科技司',
+								        left: 'center',
+								        top: 15,
+					    	            textStyle: {
+								            color: '#272727',
+								            fontSize:25,
+								        }
+								        
+								    },
+							    tooltip : {
+							        trigger: 'axis'
+							    }, 
+							    calculable : true,
+							    
+							    legend: {
+							    	left:'center',
+						            orient: 'horizontal',
+						            top:'13%',
+							        data:['东部','中部','西部']
+							    },
+							    grid: {
+							    	width:'50%',
+							    	height:'60%',
+							    	left:'15%',
+							    	top:'25%'
+							    	
+							    },
+							    xAxis : [
+							        {
+							            type : 'category',
+							            data : ['鉴定成果数','当年实际收入','学术论文'],
+							            textStyle:{
+							            	fontWeight: 'bolder',
+							            }
+							        },
+							       
+							    ],
+							    yAxis : [
+							        {
+							            type : 'value',
+							            splitLine: {
+							                show: false,
+							                
+							            },
+							            max:1800,
+							            min:0
+							        }
+							    ],
+							    series : AllSeries6[0]
+								},
+								options: []
+						};
+							
+						for(var n = 0; n<5 ;n++){
+							option.options.push({
+								title : {
+							        text: timedata[n]+'985高校科研成果汇总',
+							        subtext: '数据来源教育部科技司',
+							        left: 'center',
+							        top: 15,
+				    	            textStyle: {
+							            color: '#272727',
+							            fontSize:25,
+							        }
+							        
+							    },
+								series: AllSeries6[n]
+							})
+						}
+						mychart.setOption(option);
+						</script>
+				 </div>
+				
+				
+				</div>
+				  
+				 <div class="swiper-slide slide10 chalk-map swiper-slide-next" style="height:90hv;">
+				 <span class="no">10</span>
+				 <div class="swiper-text" style="width:10%;position:absolute;left:47%;top:87%">
+    				<img src="../image/jiantou.png" height="30px" alt="jaintou" />
+    				</div>
+				 <div class="swiper-text" style="color:#3C3C3C;text-align:center;position:absolute;top:28%; left:72%;width:24%;height:200px;">
+				 	
+				 	<div style="color:#3C3C3C;text-align:justify;"><p class="middle"><font size=3>从我们选取的每个区域的三个典型省份可见，中西部学校在鉴定成果上处于优势，而东部则在学术论文以及收入上处于优势。</font></p></div>
+				 	<p class="middle"><font size=3><strong>浙江省学术论文领先<br>北京市收入第一<br>甘肃省鉴定数领先</strong></font></p>
+				 	</div>
+					 <div id="mapDiv4" style="position:absolute;top:4%;width:100%;height:90%;overflow:hidden">
+					  <script>
+						mychart = echarts.init(document.getElementById("mapDiv4"));
+						option = {
+								baseOption:{
+									timeline: {
+										// y: 0,
+							            axisType: 'category',
+							            // realtime: false,
+							            // loop: false,
+							            autoPlay: true,
+							            // currentIndex: 2,
+							            playInterval: 2000,
+							            orient:'vertical',
+							            left:'4%',
+						                 top: '20%',
+						                 bottom: '10%',
+						                 width: 55,
+						                 inverse: true,
+							            data: [
+							                '2012',
+							                {
+							                    value: '2013',
+							                    tooltip: {
+							                        formatter: '{b}年 “十二五”开局之年'
+							                    },
+							                    symbol: 'diamond',
+							                    symbolSize: 16
+							                } ,'2014','2015', {
+							                    value: '2016',
+							                    tooltip: {
+							                        formatter: '{b}年 提出建设“双一流”发展战略'
+							                    },
+							                    symbol: 'diamond',
+							                    symbolSize: 16
+							                } 
+							            ],
+							            label: {
+							                formatter : function(s) {
+							                    return (new Date(s)).getFullYear();
+							                }
+							            }
+							        },
+							        title: {
+							            text:'985高校科研经费各省平均至每所学校科研成果情况',
+							            subtext: '数据来源教育部科技司',
+							            left: 'center',
+							            top: 15,
+					    	            textStyle: {
+								            color: '#272727',
+								            fontSize:25,
+								        }
+							        },
+						    legend: {
+						        data: ['浙江','上海','北京','安徽','黑龙江','湖北','甘肃','陕西','四川'],
+						        orient:'vertical',
+						        left:'66%',
+						        top:'30%',
+						        itemGap:12
+						       
+						    },
+						    tooltip: {
+						        trigger: 'axis',
+						        axisPointer: {
+						            type: 'shadow'
+						        }
+						    },
+						    grid: {
+						    	width:'45%',
+						    	height:'80%',
+						    	left:'20%',
+						    	top:'14%'
+						    	
+						    },
+						    yAxis: {
+						        data: [  '学术论文   \n   (百篇）   ','收入      \n  (百万)     ','鉴定成果数 \n(件)       '],
+						        nameLocation:'end',
+						        inverse: false,
+						        axisLine: {show: false},
+						        axisTick: {show: false},
+						        axisLabel: {
+						            margin: 30,
+						            textStyle: {
+						                fontSize: 14
+						            },
+						          
+						        },
+						    },
+						    xAxis: {
+						        splitLine: {show: false},
+						        axisLabel: {show: false},
+						        axisTick: {show: false},
+						        axisLine: {show: false}
+						    },
+						    series: allSeries4[0]
+								},
+								options: []
+								
+						};
+					
+						for(var n = 0; n<5 ;n++){
+							option.options.push({
+								 title: {
+							            text:timedata[n]+'985高校各省各科研成果情况',
+							            subtext: '数据来源教育部科技司',
+							            left: 'center',
+							            top: 15,
+					    	            textStyle: {
+								            color: '#272727',
+								            fontSize:25,
+								        }
+							        },
+								series: allSeries4[n]
+							})
+						}
+						mychart.setOption(option);
+						</script>
+				 </div>
+				  </div>
+			
+				                        
+				
+				
+				
+				
+				<div class="swiper-slide slide11 chalk-map" style="height: 530px;">
+				<span class="no">11</span>
+				<div class="swiper-text" style="width:10%;position:absolute;left:47%;top:87%">
+    				<img src="../image/jiantou.png" height="30px" alt="jaintou" />
+    				</div>
+				
+						<div  style="color:#3C3C3C;position:absolute;text-align:justify;left:20%;top:5%;width:60%" >
+				 	<p class="middle"><font size=3> 从以上数据中，我们可以直观地看到我国东中西部地区985高校科研投入与产出状况。东中西部地区科研经费投入差距较大，科研经费的高低通常意味着教学设备、师资力量、国际交流、项目经费等与大学科研水平发展密切相关的硬软件配置，<strong>因此，东中西部地区的科研成果产出也存在着较大差距，与科研经费的投入基本呈正相关性。</strong>
+   						</p><p class="middle"> 各地区教育资源分布情况是各地区经济社会发展的缩影，教育资源分布的不平衡与各地区经济发展的不平衡密切相关。除此之外，这种不平衡还会衍生诸多问题，发达地区人口负荷加重，环境问题逐渐显现，而欠发达地区则面临着劳动力不足、人才匮乏等问题。
+						</p> <p class="middle">为了解决这些问题，我国政府推出了一系列缩小地区发展差距的政策措施。<strong>教育，就是其中重要的一环。</strong></font>
+				 	</p><p class="middle">
+				 	<font size=3> <strong>2016年2月，我国提出了“建设世界一流大学和一流学科”的“双一流”战略。</strong>教育部国家教育发展研究中心高教研究室主任马陆亭表示，要实现“双一流”目标，不是仅靠几所重点大学集中突破，
+				 	而是每所高校都应从自身实际出发，激发创新活力。同年6月，教育部官网发布文件，宣布382份规范性文件失效，包含《关于继续实施“985工程”建设项目的意见》等“985”“211”工程以及重点、优势学科建设的相关文件。
+				 	<strong>这意味着，传统985、211高校与普通双非院校享有政策、资源不平衡的现状在政策层面上开始改善。</strong></font></p>
+				 	</div>
+				</div>
+				
+				
+				
+				
+				
+				<div class="swiper-slide slide12 chalk-map" style="height: 90hv;">
+				 	<div class="swiper-text" style="width:10%;position:absolute;left:47%;top:87%">
+    				<img src="../image/jiantou.png" height="30px" alt="jaintou" />
+    				</div>
+				 	 <div class="swiper-text" style="color:#3C3C3C;text-align:justify;position:absolute;top:22%; left:72%;width:24%;">
+				 	<p class="middle"><font size=3>到截稿前，<strong>共有21个省市提出了响应“双一流”战略的建设计划，其中中西部地区的省市多于东部</strong>，可以看出其对教育，尤其是高等教育的重视程度逐渐加深。
+				 	</font>
+				 	
+				 	<font size=3>21个省份中有11个省提出了经费保障，<strong>粗略计算在400亿左右</strong>，大量的经费投入可以吸引人才，购置高端设备、改善办学环境，这些对于“双一流”建设是不可或缺的。从投入的资金、人力和建设目标来看，中东西部在建设高等院校上的差距或将逐渐缩小。
+				 	</font></p>
+				 	</div>
+				 	
+				 	 	<div id="mapDiv8" style="position:absolute;top:4%;width:100%;height:90%;overflow:hidden"></div>
+					  <script>
+						mychart = echarts.init(document.getElementById("mapDiv8"));
+						option = {
+								title: {
+							        text: '响应“双一流”战略各省市建设计划',
+							        subtext: '数据来源各省新闻报道',
+							        left: 'center',
+							        top: 15,
+				    	            textStyle: {
+							            color: '#272727',
+							            fontSize:25,
+							        }
+							    },
+							    tooltip: {
+							        trigger: 'item',
+							        formatter:tooltip2,
+							    },
+							    geo: {
+				    	            map: 'china',
+				    	            top:'18%',
+						            left:'16%',
+						            zoom:1.1,
+				    	            label: {
+				    	                emphasis: {
+				    	                    show: false
+				    	                }
+				    	            },
+				    	            itemStyle: {
+				    	                normal: {
+				    	                    areaColor: areacolors[0],
+				    	                    borderColor: '#ECF5FF'
+				    	                },
+				    	                emphasis: {
+				    	                    areaColor: areacolors[0]
+				    	                }
+				    	            }
+				    	        },
+							    visualMap: {
+							             max:1,
+							             min:0,
+							             splitNumber:2,
+							             inRange: {
+						    	                color:['#D2E9FF','#97CBFF'],
+						    	                symbolSize: [3, 25]
+						    	            },
+							        calculable: false,
+							        show: false
+							    },
+							    toolbox: {
+							        show: true,
+							        orient: 'vertical',
+							        left: 'right',
+							        top: 'center',
+							        feature: {
+							            dataView: {readOnly: false},
+							            restore: {},
+							            saveAsImage: {}
+							        }
+							    },
+							    series: [
+							        {
+							            name: '双一流',
+							            type: 'map',
+							            mapType: 'china',
+							            zoom:1.1,
+							            top:'18%',
+							            left:'16%',
+							            roam: false,
+							            label: {
+							            	
+							                normal: {
+							                    show: true,
+							                    textStyle:{
+							                    	fontSize:4,
+							                    	fontWeight:'lighter'
+							                    }
+							                },
+							                emphasis: {
+							                    show: true
+							                }
+							            },
+							            itemStyle: {
+							            	normal: {
+							            		areaColor: areacolors[0],
+							            		borderColor: '#ECF5FF'
+							            	},
+							                emphasis: {
+							                   areaColor: '#66B3FF'
+							                }
+							            },
+							            data:[
+							            	{name: '山东', value:1},
+							            		{name: '广东', value:1},
+							            		{name: '四川', value:1},
+							            		{name: '北京', value:1},
+							            		{name: '上海', value:1},
+							            		{name: '江苏', value:1},
+							            		{name: '安徽', value:1},
+							            		{name: '甘肃', value:1},
+							            		{name: '陕西', value:1},
+							            		{name: '山西', value:1},
+							            		{name: '内蒙古', value:1},
+							            		{name: '湖南', value:1},
+							            		{name: '浙江', value:1},
+							            		{name: '河南', value:1},
+							            		{name: '贵州', value:1},
+							            		{name: '河北', value:1},
+							            		{name: '湖北', value:1},
+							            		{name: '吉林', value:1},
+							            		{name: '江西', value:1},
+							            		{name: '宁夏', value:1},
+							            		{name: '黑龙江', value:0},
+							            		{name: '新疆', value:0},
+							            		{name: '广西', value:0},
+							            		{name: '天津', value:0},
+							            		{name: '海南', value:0},
+							            		{name: '西藏', value:0},
+							            		{name: '辽宁', value:0},
+							            		{name: '青海', value:0},
+							            		{name: '云南', value:0},
+							            		{name: '福建', value:0},
+							            		{name: '台湾', value:0},
+							            		{name: '重庆', value:0},
+							            		
+							            ]
+							        }]
+								
+						};
+					
+						
+						mychart.setOption(option);
+						</script>
+				 </div>
+				 
+					<div class="swiper-slide slide11 chalk-map" style="height: 530px;">
+				<span class="no">11</span>
+				<div class="swiper-text" style="width:10%;position:absolute;left:47%;top:87%">
+    				<img src="../image/jiantou.png" height="30px" alt="jaintou" />
+    				</div>
+					<div  style="color:#3C3C3C;position:absolute;text-align:center;left:20%;top:5%;width:60%" >
+				 	<p class="middle">
+				 	<font size=3>根据以上数据，如果上述各省市均达成其建设目标，那么：</font></p>
+				 	<p></p>
+				 	</div>
+				 	<div  style="color:#3C3C3C;position:absolute;text-align:center;left:20%;top:10%;width:60%" >
+				 	<p></p>
+				 		<p class="middle">
+				 		<font size=3>
+							<strong>1.我国世界一流大学数量或占全球3成</strong> 
+							<br>以世界排名前100作为世界一流大学标准，到2020年将建成世界一流大学10所左右，
+							<br>2030年将建成16所左右，2050年则会建成21所左右。且不包括教育资源最为丰富的京沪两市。
+							<br>
+							<br>
+							<strong>2.国内高水平大学标准难统一</strong>
+							<br>在上述各省市计划中，尚未明确国内高水平大学标准。
+							<br>若将排名全国前100作为标准，除尚未提出方案的京沪等省区，
+							<br>各省市计划建设的国内高水平大学数量已经超过110所。
+							<br>
+							<br>
+							<strong>3.各省市竞争空间狭窄</strong>
+							<br>在明确提出国内百强目标的省市中，江浙鄂鲁四省就已占据41席，其他省市压力凸显。
+							<br>上述21省市共计划建设世界一流学科至少58个、国内一流学科上百个、
+							<br>ESI前1%的学科至少325个、前1‰的学科20个左右，一流额度僧多粥少。
+							<br>
+							<br>
+							由此可见，<strong>“双一流”计划的实施依然面临着许多考验。</strong>
+						</font>
+						</p>
+				 	</div>
+				</div>
+				
+				<div class="swiper-slide slide25 chalk-map" style="height: 530px;">
+				    <div class="swiper-text" font-family="Microsoft YaHei" style="width:10%;position:absolute;left:47%;top:88%">
+    				<img src="../image/end.png" height="30px" alt="end" />
+    				</div>
+							<div font-family="Microsoft YaHei" style="color:#3C3C3C;position:absolute;text-align:center;left:20%;top:12%;width:60%" >
+							  <font size=4>以上就是我国高等教育资源分布的复杂图景。<br><strong>“985”、“211”的影响力</strong>还将持续多久，<br>各地区经济社会发展的不平衡能否得到改善，<br>8月底<strong>“双一流”名单到底花落谁家</strong>，<br>其战略成效又将如何，<br>东中西部在“双一流”名额的竞争起点能否趋同，
+<br>地区教育分化的<strong>马太效应</strong>何时停止，<br>高等教育资源的“蛋糕”该如何划分，<br>这些，都值得我们深思。</font>
+							</div>
+							
+							
+								
+							
+							<div class="clear"></div>
+							<div  font-family="Microsoft YaHei" style="color:#3C3C3C;position:absolute;text-align:center;left:20%;top:62%;width:60%">
+									<br>
+									 <p class="small">
+									 <font size=2>数据来源与说明</font><br>
+									 <font size=1>[1]中华人民共和国教育部科学技术司。
+									 [2]名词解释及基本信息节选自“百度百科”词条
+									 <br>[3]中国校友会网：2007-2016中国大学评价研究报告。
+									 [4]中国教育装备采购网：“双一流”建设，各省投了多少钱？
+									 <br>[5]21世纪经济报道：首批“双一流”大学名单月底揭晓 究竟花落谁家？
+									 <br>[6]虎扑体育社区：过去十几年，上海交大和西安交大分别是中国大学进步最快和退步最快的，有疑问？</font>
+									 <br>
+									 <font size=1>相关说明：东中西部划分依据，湘教版高中地理必修三知识点</font>
+									 </p>
+									
+							</div>
+							<div  style="color:#3C3C3C;position:absolute;text-align:center;left:20%;top:82%;width:60%"><p class="small"></p>
+									
+							</div>
+					</div> <!-- /row -->
+				</div>
+
+
+
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination" style="position:absolute;right:-10%;opacity: 1;">
+	                    <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+		                    <span class="swiper-pagination-bullet"></span>
+		                    <span class="swiper-pagination-bullet"></span>
+		                    <span class="swiper-pagination-bullet"></span>
+		                    <span class="swiper-pagination-bullet"></span>
+		                    <span class="swiper-pagination-bullet"></span>
+		                    <span class="swiper-pagination-bullet"></span>
+		                    <span class="swiper-pagination-bullet"></span>
+		                    <span class="swiper-pagination-bullet"></span>
+		                    <span class="swiper-pagination-bullet"></span>
+		                    <span class="swiper-pagination-bullet"></span>
+		                    <span class="swiper-pagination-bullet"></span>
+		                    <span class="swiper-pagination-bullet"></span>
+		                    <span class="swiper-pagination-bullet"></span>
+		                    <span class="swiper-pagination-bullet"></span>
+		                    <span class="swiper-pagination-bullet"></span>
+		                    <span class="swiper-pagination-bullet"></span>
+		                    <span class="swiper-pagination-bullet"></span>
+		                    <span class="swiper-pagination-bullet"></span>
+		                    <span class="swiper-pagination-bullet"></span>
+		                    <span class="swiper-pagination-bullet"></span>
+		                    <span class="swiper-pagination-bullet"></span>
+		                    <span class="swiper-pagination-bullet"></span>
+		                    <span class="swiper-pagination-bullet"></span>
+		                    <span class="swiper-pagination-bullet"></span>
+		                    <span class="swiper-pagination-bullet"></span>
+                    </div>
+                </div>
+
+         </div>
+
+</div>
+
+
+
+<!-- Scripts reload -->
+    
+    <script type="text/javascript" src="../js/lib.min.js"></script>
+    <script type="text/javascript" src="../js/custom.min.js"></script>
+
